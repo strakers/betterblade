@@ -9,6 +9,7 @@
             "email": "contact@strakez.com"
         }
     ],
+    "license": "gpl-2.0",
     "require": {
         "php" : ">=7.1",
         "illuminate/container": "^7.0|^8.0",
