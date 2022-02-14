@@ -1,7 +1,7 @@
 # BetterBlade
-A port of Laravel 9's inline blade rendering functionality for use with previous versions of Laravel. Currently this only supports v8.0+, but I'm working towards supporting earlier versions. Stay tuned!
+A port of Laravel 9's inline blade rendering functionality for use with previous versions of Laravel. Currently this only supports v7.0+.
 
-Please note that this is intended for those who are not ready to upgrade their projects to Laravel 9. However, if you have time and resources to, I recommend installing/upgrading to Laravel 9 over using this package. (There's more to offer!)
+Please note that this package is intended for those who are not ready to upgrade their projects to Laravel 9 but wish to use the inline rendering. However, if you have time and resources to, I recommend installing/upgrading to Laravel 9 over using this package. (There's more to offer!)
 
 ## Installation
 
