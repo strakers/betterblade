@@ -1,5 +1,5 @@
 # BetterBlade
-A port of Laravel 9's Blade::render functionality for previous versions
+A port of Laravel 9's Blade::render functionality for previous versions. Currently this only supports v8.0+, but working towards supporting earlier versions. Stay tuned!
 
 ## Installation
 
