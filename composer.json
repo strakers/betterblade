@@ -1,5 +1,5 @@
 {
-    "name": "strakers/betterblade",
+    "name": "strakez/betterblade",
     "description": "A port of Laravel 9's Blade::render functionality for previous versions",
     "type": "library",
     "keywords": ["Laravel", "Blade", "Render", "Inline"],
@@ -19,6 +19,16 @@
     "autoload": {
         "psr-4": {
             "BetterBlade\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BetterBlade\\BetterBladeServiceProvider"
+            ],
+            "aliases": {
+                "BetterBlade": "BetterBlade\\BetterBladeFacade"
+            }
         }
     }
 }
