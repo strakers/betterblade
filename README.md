@@ -7,7 +7,7 @@ Please note that this is intended for those who are not ready to upgrade their p
 
 Using composer:
 
-```bash
+```shell
 composer require strakez/betterblade
 ```
 
@@ -18,7 +18,7 @@ The package setup should be autodiscovered after installation. If not, you can d
 ### Setup via Script
 Run the autodiscover script manually:
 
-```bash
+```shell
 php artisan package:discover
 ```
 
@@ -57,7 +57,7 @@ This follows the usage and functionality found in Laravel 9. For more on this, p
 
 ## Alternate Usage / Polyfill
 
-Technically, since BetterBlade extends Blade, it is possible to override the Blade facade with BetterBlade while maintaining existing functionality. To do this, comment out the default reference in the `config/app.php` file, and add the following:
+Since the BetterBlade compiler extends the core Blade compiler, it is possible to override the Blade facade with BetterBlade while maintaining existing functionality. To do this, comment out the default reference in the `config/app.php` file, and add the following:
 
 ```php
 //'Blade' => Illuminate\Support\Facades\Blade::class,
@@ -70,4 +70,4 @@ Then, usage would be as follows:
 $string = Blade::render($inlineTemplate, $replacementVariables);
 ```
 
-This method works to polyfill the inline render functionality to the existing facade, ideally reducing code changes for future migrations to Laravel 9+.
+This method works to polyfill the inline render functionality to the existing facade, ideally reducing code changes for future migrations to Laravel 9+. However, some may opt to keep this functionality separate from the default usages, so the choice is in your hands.
