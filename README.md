@@ -37,14 +37,16 @@ BetterBlade\BetterBladeServiceProvider::class
 
 ## Usage
 
-Use the registered Facade, `BetterBlade::render()` to render inline templates as strings.
+Use the facade `BetterBlade::render()` to render inline templates as strings.
 
 ```php
 $inlineTemplate = "Hello {{ $place }}. Wassup {{ $otherPlace }}!";
+
 $replacementVariables = [
     'place' => "World",
     'otherPlace' => "Universe"
 ];
+
 $string = BetterBlade::render($inlineTemplate, $replacementVariables);
 
 echo $string;
@@ -53,9 +55,9 @@ echo $string;
 
 This follows the usage and functionality found in Laravel 9. For more on this, please visit https://laravel.com/docs/9.x/blade#rendering-inline-blade-templates.
 
-## Experimental Usage
+## Alternate Usage / Polyfill
 
-Theoretically, since BetterBlade extends Blade, it is possible to override the Blade facade with BetterBlade. To do this, comment out the default reference in the `config/app.php` file, and add the following:
+Technically, since BetterBlade extends Blade, it is possible to override the Blade facade with BetterBlade while maintaining existing functionality. To do this, comment out the default reference in the `config/app.php` file, and add the following:
 
 ```php
 //'Blade' => Illuminate\Support\Facades\Blade::class,
@@ -68,4 +70,4 @@ Then, usage would be as follows:
 $string = Blade::render($inlineTemplate, $replacementVariables);
 ```
 
-This method works to polyfill the inline render functionality to the existing facade, ideally reducing code changes for future migrations to Laravel 9+. However, until more extensive testing has been performed (I'm the cautious type) to rule out any unintended functionality, I refrain from endorsing this usage.
+This method works to polyfill the inline render functionality to the existing facade, ideally reducing code changes for future migrations to Laravel 9+.
